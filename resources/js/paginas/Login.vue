@@ -43,7 +43,7 @@ export default {
     const isLogged = ref(false);
     const isAdmin = ref(false);
 
-    // Ajustar menú según permisos
+    
     const ajustarMenuUsuario = async () => {
       try {
         const { permiso, idUsuario } = await obtenerPermisos();
@@ -56,7 +56,7 @@ export default {
       }
     };
 
-    // Cerrar sesión
+    
     const cerrarSesionUsuario = async () => {
       if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
         try {
@@ -94,8 +94,8 @@ export default {
           localStorage.setItem('token', data.token);
           localStorage.setItem('userId', data.user.idUsuario);
           await ajustarMenuUsuario();
-          router.push('/'); // Redirige a la página principal
-          setTimeout(() => window.location.reload(), 100); // Recarga tras redirigir
+          router.push('/'); 
+          setTimeout(() => window.location.reload(), 100); 
         } else {
           error.value = data.message || 'Credenciales incorrectas';
         }

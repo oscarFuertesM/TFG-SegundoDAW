@@ -50,7 +50,7 @@ const borrarNoticia = async (id) => {
   if (confirm("Se eliminará la noticia de manera permanente, ¿estás seguro?")) {
     try {
       await axios.delete(`/api/noticias/${id}`);
-      await obtenerNoticias(); // recarga la lista
+      await obtenerNoticias(); 
     } catch (error) {
       console.error("Error al borrar la noticia:", error);
     }

@@ -39,7 +39,7 @@ export default {
 
     function obtenerNoticia() {
       const noticiaId = route.query.id;
-      if (!noticiaId) return; // Evita petición si no hay id
+      if (!noticiaId) return; 
       axios.get(`/api/noticias/${noticiaId}`)
         .then(response => {
           devolverDatos(response.data);

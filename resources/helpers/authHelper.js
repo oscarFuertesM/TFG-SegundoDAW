@@ -1,4 +1,4 @@
-// resources/helpers/authHelper.js
+
 import axios from 'axios';
 
 // Obtiene los datos del usuario autenticado y sus permisos

@@ -20,12 +20,10 @@ class EquipoController extends Controller
         try {
             DB::beginTransaction();
 
-            // Crear el equipo
             $equipo = Equipo::create([
                 'datosEquipo' => $request->datosEquipo,
             ]);
 
-            // Relacionarlo con el usuario autenticado
             $user = Auth::user();
             $equipo->usuarios()->attach($user->idUsuario);
 

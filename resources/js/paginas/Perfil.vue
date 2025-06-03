@@ -1,6 +1,5 @@
 <template>
-  <section class="equipos">
-    <div v-if="!usuarioLogueado" class="aviso-login">
+  <div v-if="!usuarioLogueado" class="aviso-login">
       <p>
         Para guardar tus equipos necesitas
         <router-link to="/login">iniciar sesión</router-link>
@@ -8,6 +7,8 @@
         <router-link to="/registro">registrarte</router-link>.
       </p>
     </div>
+  <section class="equipos">
+    
     <div id="equipos" class="equipo-container">
       <div
         v-for="equipo in equipos"
@@ -78,8 +79,7 @@ const cargarEquipos = async () => {
     });
   } catch (error) {
     console.error('Error al obtener los equipos:', error);
-    // Redirigir si se quiere
-    // router.push('/login');
+    
   }
 };
 

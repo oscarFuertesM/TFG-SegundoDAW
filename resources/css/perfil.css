@@ -83,11 +83,17 @@
 }
 
 .aviso-login {
-  background: #fffbe6;
-  border: 1px solid #ffe58f;
-  color: #ad8b00;
+  background: #f7f7f7;
+  border-radius: 20px;
+  border: 5px solid rgb(0, 0, 0);
+  box-shadow: 1px 1px 5px 5px #FFCC03;
+  color: #000000;
   padding: 16px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  width: 40%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  font-size: x-large;
+
 }
